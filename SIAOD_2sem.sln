@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SIAOD_2sem", "SIAOD_2sem\SIAOD_2sem.vcxproj", "{BE0EFCD1-B220-42BD-ADBB-4BC0E2BBEBDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE0EFCD1-B220-42BD-ADBB-4BC0E2BBEBDE}.Debug|x64.ActiveCfg = Debug|x64
+		{BE0EFCD1-B220-42BD-ADBB-4BC0E2BBEBDE}.Debug|x64.Build.0 = Debug|x64
+		{BE0EFCD1-B220-42BD-ADBB-4BC0E2BBEBDE}.Debug|x86.ActiveCfg = Debug|Win32
+		{BE0EFCD1-B220-42BD-ADBB-4BC0E2BBEBDE}.Debug|x86.Build.0 = Debug|Win32
+		{BE0EFCD1-B220-42BD-ADBB-4BC0E2BBEBDE}.Release|x64.ActiveCfg = Release|x64
+		{BE0EFCD1-B220-42BD-ADBB-4BC0E2BBEBDE}.Release|x64.Build.0 = Release|x64
+		{BE0EFCD1-B220-42BD-ADBB-4BC0E2BBEBDE}.Release|x86.ActiveCfg = Release|Win32
+		{BE0EFCD1-B220-42BD-ADBB-4BC0E2BBEBDE}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C36653EF-F9B3-4802-B55D-BCF7E390205B}
+	EndGlobalSection
+EndGlobal
