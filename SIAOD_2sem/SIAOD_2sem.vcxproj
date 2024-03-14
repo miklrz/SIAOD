@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="2pr\Source.cpp" />
+    <ClCompile Include="2pr\2pr.cpp" />
+    <ClCompile Include="2pr\2pr_functions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="2pr\2pr.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
