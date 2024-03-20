@@ -31,18 +31,18 @@ void putItem(typeX* arr) {
 	int num; cin >> num;
 	int temp = -1;
 	int _ = arr->n-1;
-	for (int i = 0; i < arr->n; ++i) {
-		if (isPrime(arr->x[i])) {
-			cout << "\n" << i << "\n";
-			temp = arr->x[i + 1];
-			arr->x[i + 1] = num;
-			_ = i + 2;
-			arr->n++;
+	for (int i = 1; i < arr->n; ++i) {
+		if (isPrime(arr->x[i-1])) {
+			vstavka(arr, i, num);
 			break;
 		}
 	}
-	for (int i = _; i < arr->n -1; ++i) {
-		arr->x[i] = temp;
-		temp = arr->x[i+1];
+}
+
+void vstavka(typeX* arr, int pos, int num) {
+	arr->n++;
+	for (int i = arr->n - 1; i > pos; --i) {
+		arr->x[i] = arr->x[i - 1];
 	}
+	arr->x[pos] = num;
 }
