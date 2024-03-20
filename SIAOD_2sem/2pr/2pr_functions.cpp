@@ -26,16 +26,14 @@ void getArr(typeX* arr) {
 	cout << "\n";
 }
 
-void putItem(typeX* arr) {
-	cout << "Введите элемент для вставки: ";
-	int num; cin >> num;
+void putItem(typeX* arr,int num) {
 	int index = findPrime(arr);
-	inputNumber(arr, index, num);
+	inputNumber(arr, index+1, num);
 }
 
 void delSeven(typeX* arr) {
 	for (int i = 0; i < arr->n; ++i) {
-		if (i % 7 == 0) {
+		if (arr->x[i] % 7 == 0) {
 			deleteNumber(arr, i);
 		}
 	}

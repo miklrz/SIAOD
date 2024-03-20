@@ -8,8 +8,10 @@ int main() {
 	setlocale(LC_ALL, "rus");
 	
 	typeX arr;
-	int choice;
+	int choice;	
+	int num; 
 
+	cout << "Введите элемент для вставки: "; cin >> num;
 	inputArr(&arr);
 
 	do {
@@ -27,10 +29,16 @@ int main() {
 			break;
 		case(2):
 			cout << "Позиция элемента массива, являющегося простым числом: " << findPrime(&arr) << endl;
+			break;
 		case(3):
-			putItem(&arr);
+			putItem(&arr, num);
+			break;
 		case(4):
 			delSeven(&arr);
+			break;
+		default:
+			cout << "Неверные данные, попробуйте еще раз\n";
+			break;
 		}
 	} while (choice != 0);
 	return 0;
