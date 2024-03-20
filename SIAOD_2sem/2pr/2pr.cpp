@@ -10,6 +10,7 @@ int main() {
 	typeX arr;
 	int choice;	
 	int num; 
+	cout << "¬ведите длину массива: "; cin >> arr.n;
 
 	cout << "¬ведите элемент дл€ вставки: "; cin >> num;
 	inputArr(&arr);

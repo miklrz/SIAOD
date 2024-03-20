@@ -11,7 +11,6 @@ bool isPrime(int n) {
 }
 
 void inputArr(typeX* arr) {
-	cout << "¬ведите длину массива: "; cin >> arr->n;
 	for (int i = 0; i < arr->n; ++i) {
 		cout << "¬ведите "<< i <<" значение массива : ";
 		cin >> arr->x[i];
