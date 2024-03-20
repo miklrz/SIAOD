@@ -12,4 +12,7 @@ bool isPrime(int n);
 void inputArr(typeX* arr);
 void getArr(typeX* arr);
 void putItem(typeX* arr);
-void vstavka(typeX* arr, int pos, int num);
+void delSeven(typeX* arr);
+void inputNumber(typeX* arr, int pos, int num);
+void deleteNumber(typeX* arr, int pos);
+int findPrime(typeX* arr);

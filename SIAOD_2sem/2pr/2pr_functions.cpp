@@ -29,20 +29,36 @@ void getArr(typeX* arr) {
 void putItem(typeX* arr) {
 	cout << "Введите элемент для вставки: ";
 	int num; cin >> num;
-	int temp = -1;
-	int _ = arr->n-1;
-	for (int i = 1; i < arr->n; ++i) {
-		if (isPrime(arr->x[i-1])) {
-			vstavka(arr, i, num);
-			break;
+	int index = findPrime(arr);
+	inputNumber(arr, index, num);
+}
+
+void delSeven(typeX* arr) {
+	for (int i = 0; i < arr->n; ++i) {
+		if (i % 7 == 0) {
+			deleteNumber(arr, i);
 		}
 	}
 }
 
-void vstavka(typeX* arr, int pos, int num) {
+void inputNumber(typeX* arr, int pos, int num) {
 	arr->n++;
 	for (int i = arr->n - 1; i > pos; --i) {
 		arr->x[i] = arr->x[i - 1];
 	}
 	arr->x[pos] = num;
+}
+
+void deleteNumber(typeX* arr, int pos) {
+	for (int i = pos; i < arr->n-1; ++i) {
+		arr->x[i] = arr->x[i + 1];
+	}
+	arr->n--;
+}
+
+int findPrime(typeX* arr) {
+	for (int i = 0; i < arr->n; ++i) {
+		if (isPrime(arr->x[i])) return i;
+	}
+	return -1;
 }
