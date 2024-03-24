@@ -6,14 +6,13 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "rus");
-	
-	typeX arr;
-	int choice;	
-	int num; 
-	cout << "Введите длину массива: "; cin >> arr.n;
 
-	cout << "Введите элемент для вставки: "; cin >> num;
+	typeX arr;
+	int choice;
+
+	cout << "Введите длину массива: "; cin >> arr.n;
 	inputArr(&arr);
+	int num; cout << "Введите элемент для вставки: "; cin >> num;
 
 	do {
 		cout << "Меню\n1. Вывести массив\n2. Найти позицию элемента массива, являющегося простым числом\n";
@@ -37,10 +36,8 @@ int main() {
 		case(4):
 			delSeven(&arr);
 			break;
-		default:
-			cout << "Неверные данные, попробуйте еще раз\n";
-			break;
 		}
 	} while (choice != 0);
 	return 0;
 }	
+

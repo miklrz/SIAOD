@@ -31,11 +31,12 @@ void putItem(typeX* arr,int num) {
 }
 
 void delSeven(typeX* arr) {
-	for (int i = 0; i < arr->n; ++i) {
-		if (arr->x[i] % 7 == 0) {
-			deleteNumber(arr, i);
+		for (int i = 0; i < arr->n; ++i) {
+			if (arr->x[i] % 7 == 0) {
+				deleteNumber(arr, i);
+			}
+			i--;
 		}
-	}
 }
 
 void inputNumber(typeX* arr, int pos, int num) {
