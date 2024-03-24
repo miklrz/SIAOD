@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3pr\Functions.cpp" />
+    <ClCompile Include="3pr\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3pr\Header.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -126,13 +133,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="2pr\2pr.cpp" />
-    <ClCompile Include="2pr\2pr_functions.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="2pr\2pr.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
