@@ -42,7 +42,6 @@ void deleteNumber(typeX* arr, int pos) {
 	--arr->n;
 	if (newPtr != nullptr) {
 		arr->x = newPtr;
-		cout << "1" << " ";
 	}
 	else {
 		arr->x = nullptr;
