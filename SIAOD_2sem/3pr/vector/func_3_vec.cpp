@@ -3,19 +3,11 @@
 
 using namespace std;
 
-bool isPrime(int n) {
-	for (int i = 2; i < int(sqrt(n) + 1); i++) {
-		if (n % i == 0) return false;
-	}
-	return true;
-}
 
 void inputArr(typeX* arr) {
 	for (int i = 0; i < arr->n; ++i) {
 		cout << "¬ведите " << i << " значение массива : ";
-		int temp;
-		cin >> temp;
-		arr->x.push_back(temp);
+		cin >> arr->x[i];
 	}
 }
 
@@ -27,33 +19,11 @@ void getArr(typeX* arr) {
 	cout << "\n";
 }
 
-void putItem(typeX* arr, int num) {
-	int index = findPrime(arr);
-	inputNumber(arr, index + 1, num);
-}
-
-void delSeven(typeX* arr) {
-	for (int i = 0; i < arr->n; ++i) {
-		if (arr->x[i] % 7 == 0) {
-			deleteNumber(arr, i);
-		}
-		i--;
+bool isPrime(int n) {
+	for (int i = 2; i < int(sqrt(n) + 1); i++) {
+		if (n % i == 0) return false;
 	}
-}
-//----
-void inputNumber(typeX* arr, int pos, int num) {
-	arr->n++;
-	for (int i = arr->n - 1; i > pos; --i) {
-		arr->x[i] = arr->x[i - 1];
-	}
-	arr->x[pos] = num;
-}
-
-void deleteNumber(typeX* arr, int pos) {
-	for (int i = pos; i < arr->n - 1; ++i) {
-		arr->x[i] = arr->x[i + 1];
-	}
-	arr->n--;
+	return true;
 }
 
 int findPrime(typeX* arr) {
@@ -62,3 +32,22 @@ int findPrime(typeX* arr) {
 	}
 	return -1;
 }
+
+void putItem(typeX* arr, int num) {
+	int index = findPrime(arr);
+	arr->n++;
+	arr->x.insert(arr->x.begin() + index + 1, num);
+}
+
+void delSeven(typeX* arr) {
+	for (int i = 0; i < arr->n; ++i) {
+		if (arr->x[i] % 7 == 0) {
+			arr->x.erase(arr->x.begin() + i);
+			--arr->n;
+			i--;
+		}
+	}
+}
+
+
+

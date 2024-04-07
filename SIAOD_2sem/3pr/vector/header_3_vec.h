@@ -1,14 +1,18 @@
 #pragma once
 
+#include<vector>
+using namespace std;
+
 typedef unsigned int typeitem;
 
 struct typeX {
 	unsigned int n = 0;
-	vector<typeitem> x;
+	std::vector<typeitem> x;
 	typeX(int n1) {
 		n = n1;
 		x.resize(n1);
 	}
+	typeX() { n = 0; }
 };
 
 bool isPrime(int n);
