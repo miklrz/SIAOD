@@ -24,3 +24,4 @@ void delSeven(typeX* arr);
 void inputNumber(typeX* arr, int pos, int num);
 void deleteNumber(typeX* arr, int pos);
 int findPrime(typeX* arr);
+void createNewArr(typeX arr, typeX* new_arr);

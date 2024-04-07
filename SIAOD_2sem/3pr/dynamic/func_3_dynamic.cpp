@@ -75,3 +75,18 @@ int findPrime(typeX* arr) {
 	}
 	return -1;
 }
+
+
+void createNewArr(typeX arr, typeX* new_arr) {
+	new_arr->n = 0;
+	typeitem* tmp;
+	new_arr->x = (typeitem*)malloc(0);
+	for (int i = 0; i < arr.n; ++i) {
+		if (isPrime(arr.x[i])) {
+			if ((new_arr->x = (typeitem*)realloc(new_arr->x, (new_arr->n + 1) * sizeof(typeitem))) != nullptr) {
+				new_arr->x[new_arr->n] = arr.x[i];
+				new_arr->n++;
+			}
+		}
+	}
+}

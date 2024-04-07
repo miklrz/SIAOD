@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="3pr\vector\header_3_vec.h" />
+    <ClInclude Include="3pr\dynamic\header_3_dynamic.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="3pr\vector\func_3_vec.cpp" />
-    <ClCompile Include="3pr\vector\main_3_vec.cpp" />
+    <ClCompile Include="3pr\dynamic\func_3_dynamic.cpp" />
+    <ClCompile Include="3pr\dynamic\main_3_dynamic.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -48,6 +48,3 @@ void delSeven(typeX* arr) {
 		}
 	}
 }
-
-
-
