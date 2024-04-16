@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="3pr\dynamic\header_3_dynamic.h">
+    <ClInclude Include="4pr\static\4pr_header_static.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="3pr\dynamic\func_3_dynamic.cpp">
+    <ClCompile Include="4pr\static\4pr_functions_static.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="3pr\dynamic\main_3_dynamic.cpp">
+    <ClCompile Include="4pr\static\4pr_source_static.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

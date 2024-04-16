@@ -12,3 +12,4 @@ struct typeX {
 void inputMatrix(typeX* matrix);
 void printMatrix(typeX* matrix);
 void transposition(typeX* matrix);
+

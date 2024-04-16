@@ -26,12 +26,17 @@ void transposition(typeX* matrix) {
 	typeX tempMatrix;
 	tempMatrix.n = matrix->m;
 	tempMatrix.m = matrix->n;
-	for (int i = 0; i < matrix->n; ++i) {
-		for (int j = 0; j < matrix->m; ++j) {
+	for (int i = 0; i < matrix->m; ++i) {
+		for (int j = 0; j < matrix->n; ++j) {
 			tempMatrix.x[i][j] = matrix->x[j][i];	
 		}
 	}
 	matrix->n = tempMatrix.n;
 	matrix->m = tempMatrix.m;
-	matrix = &tempMatrix;
+	for (int i = 0; i < matrix->n; ++i) {
+		for (int j = 0; j < matrix->m; ++j) {
+			matrix->x[i][j] = tempMatrix.x[i][j];
+		}
+	}
 }
+
