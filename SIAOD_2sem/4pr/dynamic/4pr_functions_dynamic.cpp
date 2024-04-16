@@ -8,31 +8,29 @@ void inputMatrix(typeX* matrix) {
 	for (int i = 0; i < matrix->n; ++i) {
 		for (int j = 0; j < matrix->m; ++j) {
 			cout << i << " " << j << " элемент матрицы: ";
-			cin >> matrix->x[i][j];
+			cin >> matrix->arr[i][j];
 		}
 	}
 }
+
 void printMatrix(typeX* matrix) {
 	for (int i = 0; i < matrix->n; ++i) {
 		for (int j = 0; j < matrix->m; ++j) {
-			cout << matrix->x[i][j] << " ";
+			cout << matrix->arr[i][j] << " ";
 		}
 		cout << endl;
 	}
 }
 
 void transposition(typeX* matrix) {
-	typeX tempMatrix(matrix->n, matrix->m);
+	typeX tempMatrix(matrix->m, matrix->n);
 	for (int i = 0; i < matrix->m; ++i) {
 		for (int j = 0; j < matrix->n; ++j) {
-			tempMatrix.x[i][j] = matrix->x[j][i];
+			tempMatrix.arr[i][j] = matrix->arr[j][i];
 		}
 	}
 	matrix->n = tempMatrix.n;
 	matrix->m = tempMatrix.m;
-	for (int i = 0; i < matrix->n; ++i) {
-		for (int j = 0; j < matrix->m; ++j) {
-			matrix->x[i][j] = tempMatrix.x[i][j];
-		}
-	}
+	matrix->arr = tempMatrix.arr;
 }
+

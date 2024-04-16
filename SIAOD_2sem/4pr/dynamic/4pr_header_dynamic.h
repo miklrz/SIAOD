@@ -6,15 +6,18 @@ const unsigned int N = 100;
 struct typeX {
 	unsigned int n;
 	unsigned int m;
-	typeitem** x;
-	typeX(int rows, int cols) {
-		n = rows;
-		m = cols;
-		x = new typeitem * [n];
+	typeitem** arr;
+	typeX(int n, int m) {
+		this->n = n;
+		this->m = m;
+		arr = new typeitem * [n];
 		for (int i = 0; i < n; ++i) {
-			x[i] = new typeitem[m];
+			arr[i] = new typeitem[m];
 		}
 	}
 };
 
 void inputMatrix(typeX* matrix);
+void printMatrix(typeX* matrix);
+void transposition(typeX* matrix);
+
