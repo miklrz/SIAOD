@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="4pr\static\4pr_header_static.h" />
+    <ClCompile Include="4pr\dynamic\4pr_functions_dynamic.cpp" />
+    <ClCompile Include="4pr\dynamic\4pr_source_dynamic.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="4pr\static\4pr_functions_static.cpp" />
-    <ClCompile Include="4pr\static\4pr_source_static.cpp" />
+    <ClInclude Include="4pr\dynamic\4pr_header_dynamic.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
