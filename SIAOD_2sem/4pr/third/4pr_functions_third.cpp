@@ -1,5 +1,7 @@
 #include "4pr_header_third.h"
 #include <iostream>
+#include <vector>
+#include <string>
 
 using namespace std;
 
@@ -7,7 +9,8 @@ void inputFigure(Figure* polygon) {
 	for (int i = 0; i < polygon->n; ++i) {
 		double x,  y; 
 		cin >> x >> y;
-		polygon->x.push_back(Point(x, y));
+		Point pnt(x, y);
+		polygon->x[i] = pnt;
 	}
 }
 
@@ -38,4 +41,23 @@ bool isPolygonInside(Figure* outer, Figure* inner) {
 		if (!inside) return false;
 	}
 	return true;
+}
+
+void draw_points(typeX* matrix, Figure* polygon) {
+	int x;
+	int y;
+	for (int i = 0; i < polygon->x.size(); ++i) {
+		y = matrix->size / 2 - polygon->x[i].y;
+		x = matrix->size / 2 + polygon->x[i].x;
+		matrix->mat[y][x] = "*";
+	}
+}
+
+void output_matrix(typeX* matrix) {
+	for (int i = 0; i < matrix->mat.size(); i++) {
+		for (int j = 0; j < matrix->mat[i].size(); j++) {
+			cout << matrix->mat[i][j];
+		}
+		cout << endl;
+	}
 }
