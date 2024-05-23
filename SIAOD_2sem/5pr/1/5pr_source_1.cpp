@@ -8,5 +8,5 @@ int main() {
 	str_nt str;
 	input_string(&str);
 	output_string(&str);
-	allocation_token(&str);
+	arr = word_array(&str);
 }

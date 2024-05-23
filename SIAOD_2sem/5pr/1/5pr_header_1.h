@@ -9,9 +9,10 @@ struct str_nt {
 	char sentence[100];
 };
 
+char** word_array(str_nt* str);
+
 void input_string(str_nt* str);
 void output_string(str_nt* str);
-void allocation_token(str_nt* str);
 void allocation_token(str_nt* str);
 void allocation_word(str_nt* str);
 void remove_word(str_nt* str, char rem[100]);

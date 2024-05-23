@@ -11,6 +11,25 @@ void output_string(str_nt* str) {
 	cout << endl;
 }
 
+bool remove_words(str_nt* str) {
+	char** arr = new char* [10];
+	char* copy_str = new char[strlen(str->sentence) + 1];
+	strcpy(copy_str, str->sentence);
+	char* token = strtok(copy_str, " ,");
+	int _ = 0;
+	while (token != NULL) {
+		bool flag = false;
+		for (int i = 0; i < _; i++) {
+			if (strcmp(arr[i], token) == 0) {
+				remove_word(token, sizeof(token))
+			}
+		}
+		strcpy(arr[_++], token);
+		token = strtok(NULL, " ,");
+	}
+	delete[] copy_str;
+}
+
 void allocation_token(str_nt* str) {
 	char* copy_str = new char[strlen(str->sentence) + 1];
 	strcpy(copy_str, str->sentence);
@@ -36,11 +55,11 @@ void allocation_word(str_nt* str) {
 	cout << "Выделенная подстрока: " << substring << endl;
 }
 
-void remove_word(str_nt* str, char rem[100]) {
-	char* substr = strstr(str->sentence, rem);
+void remove_word(char* str, char rem[100]) {
+	char* substr = strstr(str, rem);
 	if (substr != NULL) {
 		char* ost = substr + strlen(rem);
 		strcpy(substr, ost);
 	}
-	cout << "Измененная строка: " << str->sentence << endl;
+	cout << "Измененная строка: " << str << endl;
 }
