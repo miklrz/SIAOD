@@ -5,16 +5,9 @@
 
 using namespace std;
 
-struct str_nt {
-	char sentence[100];
-};
-
-
-
-void input_string(str_nt* str);
-void output_string(str_nt* str);
-void allocation_token(str_nt* str);
-void allocation_word(str_nt* str);
-void remove_word(str_nt* str, char rem[100]);
-char** words_arr(str_nt* str);
-bool unique_word(char** words_arr, char* word);
+void input_string(char* str);
+void output_string(char* str);
+void output_words(char* str);
+void output_substr(char* str);
+void remove_substr(char* str, char* substr);
+int count_word(char* str, char* substr);

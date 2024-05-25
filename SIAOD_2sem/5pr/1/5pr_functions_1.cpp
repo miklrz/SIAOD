@@ -1,19 +1,17 @@
 #include "5pr_header_1.h"
 
-void input_string(str_nt* str) {
+void input_string(char* str) {
 	cout << "Введите вашу строку: ";
-	cin.getline(str->sentence, sizeof(str->sentence));
+	cin.getline(str, 100);
 }
 
-void output_string(str_nt* str) {
-	cout << "Ваша строка: ";
-	printf("%s", str->sentence);
-	cout << endl;
+void output_string(char* str) {
+	cout << "Ваша строка: " << str << endl;
 }
 
-void allocation_token(str_nt* str) {
-	char* copy_str = new char[strlen(str->sentence) + 1];
-	strcpy(copy_str, str->sentence);
+void output_words(char* str) {
+	char* copy_str = new char[strlen(str) + 1];
+	strcpy(copy_str, str);
 	char* token = strtok(copy_str, " ,");
 	cout << token << endl;
 	while (token = strtok(NULL," ,")) {
@@ -22,7 +20,7 @@ void allocation_token(str_nt* str) {
 	delete[] copy_str;
 }
 
-void allocation_word(str_nt* str) {
+void output_substr(char* str) {
 	int start;
 	cout << "Введите индекс первого символа подстроки: ";
 	cin >> start;
@@ -32,44 +30,51 @@ void allocation_word(str_nt* str) {
 	cin >> length;
 	cin.ignore(256, '\n');
 	char substring[100];
-	memcpy(substring, str->sentence + start, length);
+	memcpy(substring, str + start, length);
 	cout << "Выделенная подстрока: " << substring << endl;
 }
 
-void remove_word(str_nt* str, char rem[100]) {
-	char* substr = strstr(str->sentence, rem);
-	if (substr != NULL) {
-		char* ost = substr + strlen(rem);
-		strcpy(substr, ost);
-		cout << 1;
-	}
-	cout << "Измененная строка: " << str->sentence<< endl;
-}
-
-char** words_arr(str_nt* str) {
-	char** arr = new char*[strlen(str->sentence + 1)];
-	int index = 0;
-	char* copy_str = new char[strlen(str->sentence) + 1];
-	strcpy(copy_str, str->sentence);
-	char* token = strtok(copy_str, ", ");
-	arr[index] = token;
-	index++;
-	while (token = strtok(NULL, ", ")) {
-		arr[index] = token;
-		index++;
-	}
-	return arr;
-}
-
-bool unique_word(char** words_arr, char* word) {
-	for (int i = 0; words_arr[i] != NULL; i++) {
-		if (strcmp(words_arr[i], word) == 0) {
-			return false;
+void remove_substr(char* str, char* substr) {
+	int len = strlen(str);
+	int len_substr = strlen(substr);
+	char* p = strstr(str, substr);
+	if (p != NULL) {
+		while (*p != '\0') {
+			*p = *(p + len_substr);
+			p++;
 		}
+		*p = '\0';
 	}
-	return true;
 }
 
-void delete_words(str_nt* str, char** arr) {
-
+int new_arr(char* str) {
+	
 }
+
+//char** words_arr(char* str) {
+//	char** arr = new char*[strlen(str + 1)];
+//	int index = 0;
+//	char* copy_str = new char[strlen(str) + 1];
+//	strcpy(copy_str, str);
+//	char* token = strtok(copy_str, ", ");
+//	arr[index] = token;
+//	index++;
+//	while (token = strtok(NULL, ", ")) {
+//		arr[index] = token;
+//		index++;
+//	}
+//	return arr;
+//}
+//
+//bool unique_word(char** words_arr, char* word) {
+//	for (int i = 0; words_arr[i] != NULL; i++) {
+//		if (strcmp(words_arr[i], word) == 0) {
+//			return false;
+//		}
+//	}
+//	return true;
+//}
+//
+//void delete_words(char* str, char** arr) {
+//
+//}
