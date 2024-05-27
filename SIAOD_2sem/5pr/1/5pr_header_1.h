@@ -10,4 +10,5 @@ void output_string(char* str);
 void output_words(char* str);
 void output_substr(char* str);
 void remove_substr(char* str, char* substr);
-int count_word(char* str, char* substr);
+char** words_arr(char* str);
+int count_word(char* str, char* word);

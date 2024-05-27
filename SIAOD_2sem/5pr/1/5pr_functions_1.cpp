@@ -14,7 +14,7 @@ void output_words(char* str) {
 	strcpy(copy_str, str);
 	char* token = strtok(copy_str, " ,");
 	cout << token << endl;
-	while (token = strtok(NULL," ,")) {
+	while (token = strtok(NULL, " ,")) {
 		cout << token << endl;
 	}
 	delete[] copy_str;
@@ -48,33 +48,51 @@ void remove_substr(char* str, char* substr) {
 }
 
 int new_arr(char* str) {
-	
+
 }
 
-//char** words_arr(char* str) {
-//	char** arr = new char*[strlen(str + 1)];
-//	int index = 0;
-//	char* copy_str = new char[strlen(str) + 1];
-//	strcpy(copy_str, str);
-//	char* token = strtok(copy_str, ", ");
-//	arr[index] = token;
-//	index++;
-//	while (token = strtok(NULL, ", ")) {
-//		arr[index] = token;
-//		index++;
-//	}
-//	return arr;
-//}
-//
-//bool unique_word(char** words_arr, char* word) {
-//	for (int i = 0; words_arr[i] != NULL; i++) {
-//		if (strcmp(words_arr[i], word) == 0) {
-//			return false;
-//		}
-//	}
-//	return true;
-//}
-//
-//void delete_words(char* str, char** arr) {
-//
-//}
+int count_words(char* str) {
+	int count = 1;
+	char* copy_str = new char[strlen(str) + 1];
+	strcpy(copy_str, str);
+	char* token = strtok(copy_str, ", ");
+	while (token = strtok(NULL, ", ")) {
+		count++;
+	}
+	return count;
+}
+
+char** words_arr(char* str) {
+	char** arr = new char* [strlen(str + 1)];
+	int index = 0;
+	char* copy_str = new char[strlen(str) + 1];
+	strcpy(copy_str, str);
+	char* token = strtok(copy_str, ", ");
+	arr[index] = token;
+	index++;
+	while (token = strtok(NULL, ", ")) {
+		arr[index] = token;
+		index++;
+	}
+	return arr;
+}
+
+int count_word(char* str, char* word) {
+	char** arr = words_arr(str);
+	int words_count = count_words(str);
+	int word_count = 0;
+	for (int i = 0; i < words_count; i++) {
+		if (strcmp(arr[i], word) == 0) {
+			word_count++;
+		}
+	}
+	return word_count;
+}
+
+void delete_word(char* str, char* word) {
+	char** arr = words_arr(str);
+	int words_count = count_words(str);
+	for (int i = 0; i < words_count; i++) {
+
+	}
+}
