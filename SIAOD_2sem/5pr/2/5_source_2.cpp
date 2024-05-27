@@ -3,11 +3,13 @@
 int main() {
 	setlocale(LC_ALL, "rus");
 	string str;
+	string inp_str;
+	int index;
 	input_string(str);
 	int choice = 1;
 	while (choice != 0) {
 		cout << "Выберите номер задачи:\n1. Вывести строку\n2. Вывести слова\n3. " <<
-			"Вывести подстроку\n4. Удалить подстроку\n5. Удалить повторяющиеся слова\n6. Сформировать массив чисел\n0. Выйти из программы\nВаш выбор: "; cin >> choice;
+			"Вывести подстроку\n4. Удалить подстроку\n5. Удалить повторяющиеся слова\n6. Сформировать массив чисел\n7. Вставить подстроку\n0. Выйти из программы\nВаш выбор: "; cin >> choice;
 		switch (choice) {
 		case(1):
 			output_string(str);
@@ -30,6 +32,12 @@ int main() {
 		case(6):
 			get_num_arr(str);
 			break;
+		case(7):
+			cin.ignore();
+			cout << "Введите подстроку для вставки: "; getline(cin, inp_str);
+			cout << "Введите индекс для вставки: "; cin >> index;
+			insert_substr(str, index, inp_str);
+
 		case(0):
 			cout << "Выход из программы!" << endl;
 		}

@@ -16,3 +16,4 @@ int count_word(char* str, char* word);
 void remove_word(char* str, char* word);
 void delete_same_words(char* str);
 void create_num_arr(char* str);
+void insert_substr(char* str, char* substr, int index);

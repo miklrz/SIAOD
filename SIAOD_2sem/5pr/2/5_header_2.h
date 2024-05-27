@@ -17,3 +17,4 @@ void remove_word(string& str, string& word);
 void delete_same_words(string& str);
 int count_word(string& str, string& word);
 void get_num_arr(string& str);
+void insert_substr(string& str, int ind, const string& sub);

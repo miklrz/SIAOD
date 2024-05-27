@@ -35,6 +35,19 @@ void output_substr(char* str) {
 	cout << "Выделенная подстрока: " << substring << endl;
 }
 
+void insert_substr(char* str, char* substr, int index) {
+	int len = strlen(str);
+	int len_substr = strlen(substr);
+	char* new_str = new char[len + len_substr + 1];
+	strncpy(new_str, str, index);
+	strncpy(new_str + index, substr, len_substr);
+	strncpy(new_str + index + len_substr, str + index, len - index);
+	new_str[len + len_substr] = '\0';
+	strcpy(str, new_str);
+	delete new_str;
+	cout << "Измененная строка: " << str << endl;
+}
+
 void remove_substr(char* str, char* substr) {
 	int len = strlen(str);
 	int len_substr = strlen(substr);

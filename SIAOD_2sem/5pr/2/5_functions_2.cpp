@@ -96,3 +96,8 @@ void get_num_arr(string& str) {
 		cout << nums[i] << " ";
 	}
 }
+
+void insert_substr(string& str, int ind, const string& sub) {
+	str.insert(ind, sub);
+	cout << "Измененная строка: " << str << endl;
+}
