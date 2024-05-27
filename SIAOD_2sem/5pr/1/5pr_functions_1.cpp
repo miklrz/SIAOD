@@ -29,8 +29,9 @@ void output_substr(char* str) {
 	cout << "Введите длину нужной подстроки: ";
 	cin >> length;
 	cin.ignore(256, '\n');
-	char substring[100];
+	char* substring = new char[length + 1];
 	memcpy(substring, str + start, length);
+	substring[length] = '\0';
 	cout << "Выделенная подстрока: " << substring << endl;
 }
 
@@ -38,7 +39,6 @@ void remove_substr(char* str, char* substr) {
 	int len = strlen(str);
 	int len_substr = strlen(substr);
 	char* p = strstr(str, substr);
-	cout <<	p << endl;
 	if (p != NULL) {
 		while (*p != '\0') {
 			*p = *(p + len_substr);
@@ -125,10 +125,25 @@ void delete_same_words(char* str) {
 	int words_count = count_words(str);
 	for (int i = 0; i < words_count; i++) {
 		int word_count = count_word(str, arr[i]);
-		cout << word_count << " ";
 		while (word_count > 1) {
 			remove_word(str, arr[i]);
 			word_count--;
 		}
 	}
+}
+
+void create_num_arr(char* str) {
+	int arr[100]{};
+	int _ = 0;
+	for (int i = 0; i < strlen(str); i++) {
+		if (isdigit(str[i])) {
+			arr[_] = str[i];
+			_++;
+		}
+	}
+	cout << "Массив чисел: ";
+	for (int i = 0; i < _; i++) {
+		cout << arr[i] - 48 << " ";
+	}
+	cout << endl;
 }

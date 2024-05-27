@@ -15,3 +15,4 @@ int count_words(char* str);
 int count_word(char* str, char* word);
 void remove_word(char* str, char* word);
 void delete_same_words(char* str);
+void create_num_arr(char* str);
