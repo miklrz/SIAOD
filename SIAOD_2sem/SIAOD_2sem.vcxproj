@@ -19,11 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="5pr\2\5_functions_2.cpp" />
-    <ClCompile Include="5pr\2\5_source_2.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="5pr\2\5_header_2.h" />
+    <ClCompile Include="7pr\7-source.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
