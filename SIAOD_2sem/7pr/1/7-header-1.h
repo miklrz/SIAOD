@@ -8,12 +8,19 @@ struct Node {
 	Node* next = NULL;
 };
 
-struct HeadNode {
+struct LinkedList {
 	Node* firstNode = NULL;
 	Node* lastNode = NULL;
 	int countNodes = 0;
 };
 
-void insertNode(HeadNode* node);
-void createNode(HeadNode* node);
-void printList(HeadNode* node);
+void insertNode(LinkedList* arr);
+void createList(LinkedList* arr, int n);
+void printList(LinkedList* arr);
+
+void createListFromTwo(LinkedList* L, LinkedList* L1, LinkedList* L2);
+void deleteEvenIndexes(LinkedList* L);
+void insertSums(LinkedList* L);
+
+bool inList(LinkedList* arr, int info);
+void insertNode(LinkedList* arr, Node* node);
