@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="7pr\1\7-functions-1.cpp" />
-    <ClCompile Include="7pr\1\7-source-1.cpp" />
+    <ClCompile Include="7pr\2\7-functions-2.cpp" />
+    <ClCompile Include="7pr\2\7-source-2.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="7pr\1\7-header-1.h" />
+    <ClInclude Include="7pr\2\7-header-2.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
