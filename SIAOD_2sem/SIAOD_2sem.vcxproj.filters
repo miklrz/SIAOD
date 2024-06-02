@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="7pr\2\7-source-2.cpp">
+    <ClCompile Include="7pr\1\7-source-1.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="7pr\2\7-functions-2.cpp">
+    <ClCompile Include="7pr\1\7-functions-1.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="7pr\2\7-header-2.h">
+    <ClInclude Include="7pr\1\7-header-1.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

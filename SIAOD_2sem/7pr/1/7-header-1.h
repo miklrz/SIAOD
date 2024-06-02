@@ -14,7 +14,7 @@ struct LinkedList {
 	int countNodes = 0;
 };
 
-void insertNode(LinkedList* arr);
+void addNode(LinkedList* arr);
 void createList(LinkedList* arr, int n);
 void printList(LinkedList* arr);
 

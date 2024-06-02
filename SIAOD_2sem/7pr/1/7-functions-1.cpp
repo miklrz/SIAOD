@@ -1,6 +1,6 @@
 #include "7-header-1.h"
 
-void insertNode(LinkedList* arr) {
+void addNode(LinkedList* arr) {
 	Node* node = new Node;
 	cout << "¬ведите данные нового узла: "; cin >> node->info;
 	insertNode(arr, node);
@@ -8,7 +8,7 @@ void insertNode(LinkedList* arr) {
 
 void createList(LinkedList* arr, int n) {
 	for (int i = 0; i < n; i++) {
-		insertNode(arr);
+		addNode(arr);
 	}
 }
 
