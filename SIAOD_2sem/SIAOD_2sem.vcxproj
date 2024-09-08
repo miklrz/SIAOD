@@ -31,6 +31,7 @@
     <ProjectGuid>{be0efcd1-b220-42bd-adbb-4bc0e2bbebde}</ProjectGuid>
     <RootNamespace>SIAOD2sem</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>SIAOD</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
