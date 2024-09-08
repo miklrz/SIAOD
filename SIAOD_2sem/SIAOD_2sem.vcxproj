@@ -18,13 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="7pr\1\7-functions-1.cpp" />
-    <ClCompile Include="7pr\1\7-source-1.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="7pr\1\7-header-1.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
