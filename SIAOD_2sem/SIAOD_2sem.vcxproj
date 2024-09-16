@@ -20,6 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sem3\pr1\first\Main.cpp" />
+    <ClCompile Include="sem3\pr1\first\Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sem3\pr1\first\Header.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
