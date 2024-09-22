@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sem3\pr1\first\Main.cpp">
+    <ClCompile Include="sem3\pr1\second\Main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="sem3\pr1\first\Source.cpp">
+    <ClCompile Include="sem3\pr1\second\Source.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sem3\pr1\first\Header.h">
+    <ClInclude Include="sem3\pr1\second\Header.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

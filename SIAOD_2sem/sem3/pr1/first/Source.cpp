@@ -1,16 +1,14 @@
 #include "Header.h"
 
-int a(int x) {
-	unsigned char x = 255; //8-разр€дное двоичное число 11111111 
-	unsigned char maska = 1; //1=00000001 Ц 8-разр€дна€ маска 
-	x = x & (~ (maska<<4)); //результат x=239
+unsigned int a(unsigned int x) {
+	unsigned int maska = 1; //1=00000001 Ц 8-разр€дна€ маска 
+	x = x & (~ (maska << 4)); //результат x=239
 	return x;
 }
 
-int b(int x, int bit) {
-	unsigned int x = 255;
+unsigned int b(unsigned int x) {
 	unsigned int maska = 1;
-	x = x & (~(maska << (bit-1)));
+	x = x | (maska << 6);
 	return x;
 }
 

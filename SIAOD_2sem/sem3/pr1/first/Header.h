@@ -5,6 +5,6 @@
 #include <bitset>
 using namespace std;
 
-int a(int x);
-int b(int x, int bit);
+unsigned int a(unsigned int x);
+unsigned int b(unsigned int x);
 int c();
