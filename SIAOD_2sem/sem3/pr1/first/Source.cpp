@@ -1,14 +1,14 @@
 #include "Header.h"
 
-unsigned int a(unsigned int x) {
-	unsigned int maska = 1; //1=00000001 – 8-разрядная маска 
-	x = x & (~ (maska << 4)); //результат x=239
+unsigned int a(unsigned int x) { // 1.а Установка 5 бита в 0
+	unsigned int maska = 1; // 1 = 00000001 - 8-разрядная маска
+	x = x & (~ (maska << 4));  
 	return x;
 }
 
-unsigned int b(unsigned int x) {
-	unsigned int maska = 1;
-	x = x | (maska << 6);
+unsigned int b(unsigned int x) { // 1.б Установка 7-го бита в 1
+	unsigned int maska = 1; // 1 = 00000001 - 8-разрядная маска
+	x = x | (maska << 6); 
 	return x;
 }
 
@@ -16,14 +16,14 @@ int c() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	unsigned int x = 25;
-	const int n = sizeof(int) * 8;
-	unsigned maska = (1 << n - 1);
+	unsigned int x = 25; 
+	const int n = sizeof(int) * 8; // 32 - количество разрядов в числе целого типа
+	unsigned maska = (1 << n - 1); // 1 в старшем бите 32-разрядной сетки
 	cout << "Начальный вид маски: " << bitset<n>(maska) << endl;
 	cout << "Результат: ";
-	for (int i = 1; i <= n; i++) {
+	for (int i = 1; i <= n; i++) { // 32 итерации
 		cout << ((x & maska) >> (n - i));
-		maska = maska >> 1;
+		maska = maska >> 1; // сдвиг на разряд вправо
 	}
 	cout << endl;
 	system("pause");
