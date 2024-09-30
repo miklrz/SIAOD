@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sem3\pr5_2\Main.cpp" />
+    <ClCompile Include="sem3\pr5_2\Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sem3\pr5_2\Header.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
