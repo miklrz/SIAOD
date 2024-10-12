@@ -50,52 +50,52 @@ void createBinaryFile(const string& textFilename, const string& binaryFilename) 
 	}
 }
 
-PhoneNumberOwner linearSearch(const string& binaryFilename, string phoneNumberKey, int fileLen) {
-	ifstream ifstr(binaryFilename, ios::binary);
-	if (ifstr.is_open()) {
-		PhoneNumberOwner phoneNumberOwner;
-		//while (ifstr.read(reinterpret_cast<char*>(&phoneNumberOwner.phoneNumber), sizeof(phoneNumberOwner.phoneNumber))) {
-		//	if (phoneNumberOwner.phoneNumber == phoneNumberKey) {
-		//		ifstr.close();
-		//		return phoneNumberOwner;
-		//	}
-		//}
-		for (int i = 0; i < fileLen; i++) {
-
-		}
-		ifstr.close();
-	}
-	else {
-		cout << "error";
-	}
-	ifstr.close();
-	return {};
-}
-
-string getRandomPhoneNumber(const string& textFilename, int fileLen) {
-	ifstream infile(textFilename);
-
-	if (!infile.is_open()) {
-		cout << "Error opening file" << endl;
-		return ""; 
-	}
-	vector<PhoneNumberOwner> phoneOwners;
-	PhoneNumberOwner phoneNumberOwner;
-
-	while (infile >> phoneNumberOwner.phoneNumber) {
-		getline(infile, phoneNumberOwner.address); // Считываем оставшуюся часть строки (адрес)
-		phoneOwners.push_back(phoneNumberOwner); // Добавляем в вектор
-	}
-
-	infile.close();
-
-	if (phoneOwners.empty()) {
-		cout << "No records found" << endl;
-		return ""; // Возвращаем пустую строку, если записи не найдены
-	}
-
-	srand(static_cast<unsigned int>(time(0))); // Инициализация генератора случайных чисел
-	int randomIndex = rand() % phoneOwners.size(); // Генерация случайного индекса
-
-	return phoneOwners[randomIndex].phoneNumber; // Возвращаем случайный номер телефона
-}
+//PhoneNumberOwner linearSearch(const string& binaryFilename, string phoneNumberKey, int fileLen) {
+//	ifstream ifstr(binaryFilename, ios::binary);
+//	if (ifstr.is_open()) {
+//		PhoneNumberOwner phoneNumberOwner;
+//		//while (ifstr.read(reinterpret_cast<char*>(&phoneNumberOwner.phoneNumber), sizeof(phoneNumberOwner.phoneNumber))) {
+//		//	if (phoneNumberOwner.phoneNumber == phoneNumberKey) {
+//		//		ifstr.close();
+//		//		return phoneNumberOwner;
+//		//	}
+//		//}
+//		for (int i = 0; i < fileLen; i++) {
+//
+//		}
+//		ifstr.close();
+//	}
+//	else {
+//		cout << "error";
+//	}
+//	ifstr.close();
+//	return {};
+//}
+//
+//string getRandomPhoneNumber(const string& textFilename, int fileLen) {
+//	ifstream infile(textFilename);
+//
+//	if (!infile.is_open()) {
+//		cout << "Error opening file" << endl;
+//		return ""; 
+//	}
+//	vector<PhoneNumberOwner> phoneOwners;
+//	PhoneNumberOwner phoneNumberOwner;
+//
+//	while (infile >> phoneNumberOwner.phoneNumber) {
+//		getline(infile, phoneNumberOwner.address); // Считываем оставшуюся часть строки (адрес)
+//		phoneOwners.push_back(phoneNumberOwner); // Добавляем в вектор
+//	}
+//
+//	infile.close();
+//
+//	if (phoneOwners.empty()) {
+//		cout << "No records found" << endl;
+//		return ""; // Возвращаем пустую строку, если записи не найдены
+//	}
+//
+//	srand(static_cast<unsigned int>(time(0))); // Инициализация генератора случайных чисел
+//	int randomIndex = rand() % phoneOwners.size(); // Генерация случайного индекса
+//
+//	return phoneOwners[randomIndex].phoneNumber; // Возвращаем случайный номер телефона
+//}

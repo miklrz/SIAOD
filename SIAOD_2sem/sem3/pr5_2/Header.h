@@ -11,11 +11,11 @@
 using namespace std;
 
 struct PhoneNumberOwner {
-	string phoneNumber;
+	string phoneNumber; // ключ
 	string address;
 };
 
 void createTextFile(const string& filename, int len);
 void createBinaryFile(const string& textFilename, const string& binaryFilename);
-PhoneNumberOwner linearSearch(const string& binaryFilename, string phoneNumberKey);
-string getRandomPhoneNumber(const string& binaryFilename, int fileLen);
+//PhoneNumberOwner linearSearch(const string& binaryFilename, string phoneNumberKey);
+//string getRandomPhoneNumber(const string& binaryFilename, int fileLen);
