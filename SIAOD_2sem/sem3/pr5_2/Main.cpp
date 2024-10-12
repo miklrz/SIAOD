@@ -6,7 +6,7 @@ int main() {
 	string textFilename = "text.txt";
 	string binaryFilename = "binary.txt";
 
-	const vector<int> recordCount = { 5};
+	const vector<int> recordCount = {100};
 
 	for (int fileLen : recordCount) {
 
@@ -16,25 +16,25 @@ int main() {
 		auto end = chrono::high_resolution_clock::now();
 
 		cout << "Данные записаны в бинарный файл для " << fileLen << " записей" << endl;
-		//chrono::duration<double, milli> duration = end - start;
-		//cout << "Время создания " << duration.count() << " мс" << endl;
+		chrono::duration<double, milli> duration = end - start;
+		cout << "Время создания " << duration.count() << " мс" << endl;
 
-		//string randomPhoneNumber = getRandomPhoneNumber(textFilename, fileLen);
-		//cout << "Поиск человека с номером телефона: " << randomPhoneNumber;
+		string randomPhoneNumber = getRandomPhoneNumber(textFilename, fileLen);
+		cout << "Поиск человека с номером телефона: " << randomPhoneNumber << endl;
 
-		//start = chrono::high_resolution_clock::now();
-		//PhoneNumberOwner foundOwner = linearSearch(binaryFilename, randomPhoneNumber);
-		//end = chrono::high_resolution_clock::now();
-		//cout << "Время поиска " << duration.count() << " мс" << endl;
+		start = chrono::high_resolution_clock::now();
+		PhoneNumberOwner foundOwner = linearSearch(binaryFilename, randomPhoneNumber);
+		end = chrono::high_resolution_clock::now();
+		cout << "Время поиска " << duration.count() << " мс" << endl;
 
-		//if (!foundOwner.phoneNumber.empty()) {
-		//	cout << "Найден владелец телефона: " << foundOwner.phoneNumber << " \nС адресом: " << foundOwner.address << endl;
-		//}
-		//else {
-		//	cout << "Владелец телефона не найден";
-		//}
+		if (!foundOwner.phoneNumber.empty()) {
+			cout << "Найден владелец телефона: " << foundOwner.phoneNumber << " \nС адресом: " << foundOwner.address << endl;
+		}
+		else {
+			cout << "Владелец телефона не найден";
+		}
 
-		//duration = end - start;
+		duration = end - start;
 
 	}
 
