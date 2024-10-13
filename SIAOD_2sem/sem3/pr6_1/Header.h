@@ -96,17 +96,17 @@ public:
             index = (index + step) % capacity;
         }
 
-        cout << "Student not found!" << endl;
+        cout << "Студент не найден!" << endl;
     }
 
     // Вывод содержимого таблицы
     void display() const {
         for (int i = 0; i < capacity; i++) {
             if (table[i].id != -1) {
-                cout << "Index " << i << ": "
-                    << "ID: " << table[i].id
-                    << ", Group: " << table[i].groupNumber
-                    << ", Name: " << table[i].name << endl;
+                cout << "Индекс " << i << ": "
+                    << "Номер зачетной книжки: " << table[i].id
+                    << ", Номер группы: " << table[i].groupNumber
+                    << ", ФИО: " << table[i].name << endl;
             }
         }
     }
