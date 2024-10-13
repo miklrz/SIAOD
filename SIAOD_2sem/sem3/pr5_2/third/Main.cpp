@@ -1,25 +1,17 @@
 #include "Header.h" 
 
-//void printIndexTable(const vector<IndexEntry>& indexTable) {
-//	for (const auto& entry : indexTable) {
-//		cout << "Phone Number: " << entry.phoneNumber
-//			<< ", Offset: " << entry.offset << endl;
-//	}
-//}
-
 int main() {
 	setlocale(LC_ALL, "rus");
 
 	string textFilename = "text.txt";
 	string binaryFilename = "binary.bin";
 
-	int fileLen = 100;
+	int fileLen = 10000;
 
 	createTextFile(textFilename, fileLen);
 
 	vector<IndexEntry> index_table;
 
-	//printIndexTable(index_table); // Выводим содержимое
 	createBinaryFile(textFilename, binaryFilename, index_table);
 
 	sort(index_table.begin(), index_table.end()); // Сортируем

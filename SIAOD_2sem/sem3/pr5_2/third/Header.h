@@ -33,3 +33,4 @@ string getRandomPhoneNumber(const string& binaryFilename, int fileLen);
 
 streampos binarySearch(const vector<IndexEntry>& indexTable, const string& key);
 PhoneNumberOwner readPhoneOwner(const string& binaryFilename, streampos offset);
+

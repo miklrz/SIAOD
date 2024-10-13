@@ -109,3 +109,4 @@ string getRandomPhoneNumber(const string& textFilename, int fileLen) {
 
 	return phoneOwners[randomIndex].phoneNumber; // Возвращаем случайный номер телефона
 }
+

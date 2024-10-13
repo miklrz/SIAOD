@@ -6,35 +6,35 @@ int main() {
 	string textFilename = "text.txt";
 	string binaryFilename = "binary.bin";
 
-	int fileLen = 100;
+	int fileLenArr[]{100, 1000, 10000};
+	for (int fileLen : fileLenArr) {
 
-	auto start = chrono::high_resolution_clock::now();
-	createTextFile(textFilename, fileLen);
-	createBinaryFile(textFilename, binaryFilename);
-	auto end = chrono::high_resolution_clock::now();
+		auto start = chrono::high_resolution_clock::now();
+		createTextFile(textFilename, fileLen);
+		createBinaryFile(textFilename, binaryFilename);
+		auto end = chrono::high_resolution_clock::now();
 
-	cout << "Данные записаны в бинарный файл для " << fileLen << " записей" << endl;
-	chrono::duration<double, milli> duration = end - start;
-	cout << "Время создания " << duration.count() << " мс" << endl;
+		cout << "Данные записаны в бинарный файл для " << fileLen << " записей" << endl;
+		chrono::duration<double, milli> duration = end - start;
+		cout << "Время создания " << duration.count() << " мс" << endl;
 
-	string randomPhoneNumber = getRandomPhoneNumber(textFilename, fileLen);
-	cout << "Поиск человека с номером телефона: " << randomPhoneNumber << endl;
+		string randomPhoneNumber = getRandomPhoneNumber(textFilename, fileLen);
+		cout << "Поиск человека с номером телефона: " << randomPhoneNumber << endl;
 
-	start = chrono::high_resolution_clock::now();
-	PhoneNumberOwner foundOwner = linearSearch(binaryFilename, randomPhoneNumber);
-	end = chrono::high_resolution_clock::now();
-	cout << "Время поиска " << duration.count() << " мс" << endl;
+		start = chrono::high_resolution_clock::now();
+		PhoneNumberOwner foundOwner = linearSearch(binaryFilename, randomPhoneNumber);
+		end = chrono::high_resolution_clock::now();
+		duration = end - start;
+		cout << "Время поиска " << duration.count() << " мс" << endl;
 
-	if (!foundOwner.phoneNumber.empty()) {
-		cout << "Найден владелец телефона: " << foundOwner.phoneNumber << " \nС адресом: " << foundOwner.address << endl;
+		if (!foundOwner.phoneNumber.empty()) {
+			cout << "Найден владелец телефона: " << foundOwner.phoneNumber << " \nС адресом: " << foundOwner.address << endl;
+		}
+		else {
+			cout << "Владелец телефона не найден";
+		}
+		cout << endl;
 	}
-	else {
-		cout << "Владелец телефона не найден";
-	}
-
-	duration = end - start;
-
-
 	//auto start = chrono::high_resolution_clock::now();
 	//createTextFile(textFilename, 100);
 	//createBinaryFile(textFilename, binaryFilename);
