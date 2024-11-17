@@ -19,10 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sem3\pr6_1\Main.cpp" />
+    <ClCompile Include="sem3\pr6_2\Main.cpp" />
+    <ClCompile Include="sem3\pr6_2\Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sem3\pr6_1\Header.h" />
+    <ClInclude Include="sem3\pr6_2\Header.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
