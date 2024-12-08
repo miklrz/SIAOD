@@ -19,10 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sem3\pr8_1\shennon\Header.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="sem3\pr8_1\shennon\Main.cpp" />
+    <ClCompile Include="sem3\pr8_2\Main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
