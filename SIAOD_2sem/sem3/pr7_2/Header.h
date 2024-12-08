@@ -20,6 +20,7 @@ private:
         }
 
         visited[current] = 1;
+        //cout << current << " ";
 
         for (int i = 0; i < vertices; ++i) {
             if (!visited[i] && adjMatrix[current][i] != 0) {
@@ -46,7 +47,6 @@ public:
         return minDistance;
     }
 
-
     void displayGraph() {
         cout << "Матрица смежности:\n";
 
@@ -65,5 +65,50 @@ public:
             }
             cout << endl;
         }
+    }
+
+    // Ввод графа с клавиатуры
+    void inputGraph() {
+        cout << "Введите количество вершин: ";
+        cin >> vertices;
+        visited.resize(vertices, 0);
+        adjMatrix.resize(vertices, vector<int>(vertices, 0));
+
+        cout << "Введите рёбра графа (начало, конец, вес). Введите -1 для завершения.\n";
+        while (true) {
+            int u, v, weight;
+            cout << "Начало: ";
+            cin >> u;
+            if (u == -1) break;
+            cout << "Конец: ";
+            cin >> v;
+            cout << "Вес: ";
+            cin >> weight;
+
+            if (u > 0 && v > 0 && u <= vertices && v <= vertices) {
+                addEdge(u - 1, v - 1, weight); // Вершины сдвигаются для индексации от 0
+            }
+            else {
+                cout << "Некорректный ввод. Попробуйте снова.\n";
+            }
+        }
+    }
+
+    // Установить граф из варианта задания
+    void setExampleGraph() {
+        vertices = 6;
+        visited.resize(vertices, 0);
+        adjMatrix = vector<vector<int>>(vertices, vector<int>(vertices, 0));
+
+        addEdge(0, 1, 8);
+        addEdge(0, 2, 4);
+        addEdge(1, 3, 6);
+        addEdge(1, 4, 3);
+        addEdge(2, 1, 3);
+        addEdge(2, 3, 2);
+        addEdge(2, 5, 10);
+        addEdge(3, 4, 3);
+        addEdge(3, 5, 1);
+        addEdge(4, 5, 4);
     }
 };

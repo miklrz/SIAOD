@@ -2,35 +2,45 @@
 
 int main() {
     setlocale(LC_ALL, "rus");
-    // Количество вершин
-    int vertices = 6;
+    // Создание пустого графа
+    cout << "Программа для работы с графами.\n";
 
-    // Создание графа
-    Graph graph(vertices);
+    // Выбор графа
+    cout << "Выберите способ задания графа:\n";
+    cout << "1. Использовать граф из задания.\n";
+    cout << "2. Ввести граф вручную.\n";
+    int choice;
+    cin >> choice;
 
-    // Заполнение графа (из задания)
-    graph.addEdge(0, 1, 8);
-    graph.addEdge(0, 2, 4);
-    graph.addEdge(1, 3, 6);
-    graph.addEdge(1, 4, 3);
-    graph.addEdge(2, 3, 2);
-    graph.addEdge(2, 1, 3);
-    graph.addEdge(2, 5, 10);
-    graph.addEdge(3, 4, 3);
-    graph.addEdge(3, 5, 1);
-    graph.addEdge(4, 5, 4);
+    Graph graph(0);
+
+    if (choice == 1) {
+        graph.setExampleGraph();
+        cout << "Граф из задания успешно загружен.\n";
+    }
+    else if (choice == 2) {
+        graph.inputGraph();
+    }
+    else {
+        cout << "Некорректный выбор. Завершение программы.\n";
+        return 1;
+    }
 
     // Отображение графа
     graph.displayGraph();
 
-    // Нахождение кратчайшего пути
-    int start = 0; // начальная вершина (1 в задании)
-    int end = 5;   // конечная вершина (6 в задании)
+    // Ввод начальной и конечной вершин
+    int start, end;
+    cout << "Введите начальную вершину: ";
+    cin >> start;
+    cout << "Введите конечную вершину: ";
+    cin >> end;
 
-    int shortestPath = graph.findShortestPath(start, end);
+    // Нахождение кратчайшего пути
+    int shortestPath = graph.findShortestPath(start - 1, end - 1);
 
     // Вывод результата
-    cout << "Кратчайший путь из вершины " << (start + 1) << " в вершину " << (end + 1) << ": " << shortestPath << endl;
+    cout << "Кратчайший путь из вершины " << start << " в вершину " << end << ": " << shortestPath << endl;
 
     return 0;
 }
